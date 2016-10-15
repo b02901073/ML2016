@@ -4,4 +4,3 @@
 # History:
 # 2015/07/16	VBird	First release
 python b02901073.py
-exit 0
