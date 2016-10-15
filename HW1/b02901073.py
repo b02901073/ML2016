@@ -96,7 +96,12 @@ for i in range(0,240):
 	#print(station)
 	station=[]
 
-f = open("submit.csv","w",newline='')
+f = open("linear_regression.csv","w",newline='')
+w = csv.writer(f)
+w.writerows(submit)
+f.close()
+
+f = open("kaggle_best.csv","w",newline='')
 w = csv.writer(f)
 w.writerows(submit)
 f.close()
