@@ -34,7 +34,7 @@ if __name__=='__main__':
         data=[]
         x=[]
         y=[]
-        with open('spam_data/spam_train.csv',newline='') as f:
+        with open(args[2],newline='') as f:
             reader = csv.reader(f)
             for row in reader:
                 data.append(row)
@@ -76,7 +76,7 @@ if __name__=='__main__':
         for i in range(len(m)):
             m[i] = [float(x) for x in m[i]]
 
-        with open('spam_data/spam_test.csv',newline='') as f:
+        with open(args[2],newline='') as f:
             reader = csv.reader(f)
             for row in reader:
                 data.append(row)
