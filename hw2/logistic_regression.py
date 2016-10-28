@@ -20,13 +20,6 @@ def logistic(x, y, theta, alpha, m, numIterations):
 
     return theta
 
-    
-
-    def Loss(Y, F):
-        one = np.ones(Y.shape[0]).reshape(Y.shape[0], 1)
-        L = (-(np.dot(Y.T, np.log(F)) + np.dot(((one-Y).T), np.log(one-F))))
-        return L
-
 # main code here
 if __name__=='__main__':
     args = sys.argv
