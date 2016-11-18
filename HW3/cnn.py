@@ -17,10 +17,6 @@ a = sys.argv[1]
 b = sys.argv[2]
 print('input data:',a)
 print('output model:',b)
-# input image dimensions
-img_rows, img_cols = 32, 32
-# the CIFAR10 images are RGB
-img_channels = 3
 
 class CNN:
     def __init__(self):
@@ -66,7 +62,6 @@ class CNN:
         self.constructModel()
         self.fitting()
         self.train_unlabel()
-        self.fitting()
 
     def constructModel(self):
         model = Sequential()
@@ -169,7 +164,7 @@ class CNN:
             classes, confs = self.predict(self.X_unlabel)
             self.add_label(classes, confs)
             self.fitting()
-        self.nb_epoch = 100
+        self.nb_epoch = 50
 
 if __name__=='__main__':
     cnn = CNN()
