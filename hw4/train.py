@@ -25,7 +25,7 @@ check_index = np.delete(check_index,0,0)
 
 print(check_index.shape)
 
-vectorizer = TfidfVectorizer(max_df=0.5,min_df=2,stop_words='english')
+vectorizer = TfidfVectorizer(max_df=0.5, max_features=None, min_df=2, stop_words='english')
 X = vectorizer.fit_transform(data)
 
 
@@ -36,7 +36,7 @@ lsa = make_pipeline(svd, normalizer)
 X = lsa.fit_transform(X)
 
 #K-means
-km = KMeans(n_clusters=100, init='k-means++', n_init=20, verbose=True).fit(X)
+km = KMeans(n_clusters=85, init='k-means++', n_init=20, verbose=False).fit(X)
 #print('end')
 print(X.shape)
 L = km.labels_
